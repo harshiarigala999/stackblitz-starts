@@ -106,6 +106,10 @@ app.get('/stocks/filter/industry', (req, res) => {
   const filteredStocks = filterByIndustry(industry); // Filter stocks by industry
   res.json({ stocks: filteredStocks }); // Send filtered stocks as JSON response
 });
+
+app.get('/', (req, res) => {
+    res.send("Welcome to Stock Portfolio Analysis API");
+ });
 app.get('/stocks', (req, res) => {
   res.json({ stocks }); // Send all stocks as JSON response
 });
